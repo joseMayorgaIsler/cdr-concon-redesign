@@ -23,6 +23,8 @@ jobs:
 
       - name: Build Project
         run: npm run build
+        env:
+          VITE_CONTACT_API_URL: ${{ secrets.VITE_CONTACT_API_URL }}
 
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v5.0.3
